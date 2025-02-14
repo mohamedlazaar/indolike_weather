@@ -63,7 +63,7 @@ function App() {
             setError('Failed to get location name');
           }
         },
-        (error) => {
+        () => {
           setError('Failed to retrieve your location. Please enable geolocation access.');
         }
       );
@@ -110,7 +110,7 @@ function App() {
   };
 
   useEffect(() => {
-    fetchWeatherData(); // Fetch weather data for the default location on initial render
+    fetchWeatherData();
   }, []);
 
   return (
